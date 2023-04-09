@@ -1,7 +1,15 @@
 {
-    "rewrites": [
-      { "source": "/api/:any*", "destination": "/server/index.js" },
-      { "source": "/(.*)", "destination": "/client/$1" }
+    "version": 2,
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/server/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/client/$1"
+      }
     ]
   }
+  
   
