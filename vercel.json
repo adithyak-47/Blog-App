@@ -1,36 +1,21 @@
 {
     "version": 2,
-    "builds": [
-      {
-        "src": "client/package.json",
-        "use": "@vercel/static-build"
-      },
-      {
-        "src": "server/package.json",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "/server/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/client/$1"
-      }
-    ],
+    "env": {
+      "MONGODB_URL": "$(cat server/.env | grep MONGODB_URL | cut -d '=' -f2)",
+      "SECRET_KEY": "$(cat server/.env | grep SECRET_KEY | cut -d '=' -f2)"
+    },
     "rewrites": [
       {
         "source": "/api/(.*)",
-        "destination": "/server/$1"
+        "destination": "/server/api/$1"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/client/$1"
       }
-    ],
-    "env": {
-      "MONGODB_URL": "@server:MONGODB_URL",
-      "SECRET_KEY": "@server:SECRET_KEY"
-    }
+    ]
   }
+  
   
   
   
