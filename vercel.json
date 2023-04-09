@@ -11,8 +11,8 @@
       }
     ],
     "env": {
-        "MONGODB_URL": "@server:MONGODB_URL",
-        "SECRET_KEY": "@server:SECRET_KEY"
+        "MONGODB_URL": "$(cat server/.env | grep MONGODB_URL | cut -d '=' -f2)",
+        "SECRET_KEY": "$(cat server/.env | grep SECRET_KEY | cut -d '=' -f2)"
       }
   }
   
