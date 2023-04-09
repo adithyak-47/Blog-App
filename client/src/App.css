@@ -1,0 +1,183 @@
+*
+{
+  box-sizing: border-box;
+}
+
+main
+{
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+img
+{
+  max-width: 100%;
+}
+
+a,button{
+  cursor: pointer;
+}
+
+header
+{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  align-items: center;
+}
+header a{
+  text-decoration: none;
+  color: black;
+}
+
+header nav{
+  display: flex;
+  gap: 50px;
+}
+
+.logo
+{
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.post
+{
+  display: grid;
+  grid-template-columns: 500px 300px;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+@media screen and(min-width: 700px) {
+
+  .post
+  {
+    display: grid;
+    grid-template-columns: 200px 50px;
+  }
+  
+}
+
+.post .content h2{
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.info
+{
+  margin: 6px 0;
+  color: #888;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+}
+
+.author
+{
+  color: #333;
+}
+
+.summary
+{
+  margin: 10px 0;
+  line-height: 1.4rem;
+}
+
+.loginForm, .registerForm
+{
+  max-width: 400px;
+  margin: 0 auto;
+
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: -1px -1px 30px 3px black;
+}
+
+input{
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 7px 7px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+}
+
+button{
+  width: 100%;
+  display: block;
+  background-color: #555;
+  border: 0;
+  color: white;
+  border-radius: 5px;
+  padding: 7px 0;
+  margin-top: 30px;
+}
+
+form.login h1, form.register h1{
+  text-align: center;
+}
+
+div.post a {
+  text-decoration: none;
+  color: black;
+}
+
+div.post-page div.image
+{
+  max-height: 500px;
+  display: flex;
+  overflow: hidden;
+}
+
+div.post-page div.image img
+{
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+div.post-page h1
+{
+  text-align: center;
+}
+
+div.post-page time
+{
+  text-align: center;
+  display: block;
+  font-size: 0.7rem;
+  color: #aaa;
+  margin: 30px 0 10px;
+}
+
+div.post-page div.author{
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+}
+
+div.edit-row
+{
+  text-align: center;
+}
+
+div.edit-row svg{
+  height: 20px;
+}
+
+div.edit-row .edit-btn
+{
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  text-decoration: none;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
