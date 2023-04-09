@@ -9,7 +9,11 @@
         "src": "/(.*)",
         "dest": "/client/$1"
       }
-    ]
+    ],
+    "env": {
+        "MONGODB_URL": "@server:MONGODB_URL",
+        "SECRET_KEY": "@server:SECRET_KEY"
+      }
   }
   
   
