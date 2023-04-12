@@ -1,8 +1,8 @@
 {
     "version": 2,
     "env": {
-      "MONGODB_URL": "$(cat server/.env | grep MONGODB_URL | cut -d '=' -f2)",
-      "SECRET_KEY": "$(cat server/.env | grep SECRET_KEY | cut -d '=' -f2)"
+      "MONGODB_URL": "@MONGODB_URL",
+      "SECRET_KEY": "@SECRET_KEY"
     },
     "rewrites": [
       {
